@@ -14,5 +14,5 @@ Neste portfólio, você encontrará informações sobre mim, minhas habilidades,
 
 ## Demonstração
 
-Você pode ver uma demonstração ao vivo do meu portfólio [aqui](#) ( ).
+Você pode ver uma demonstração ao vivo do meu portfólio [aqui](#) (https://jainerodrigues.github.io/my-portfolio/ ).
 
