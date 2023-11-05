@@ -437,7 +437,8 @@ img#imagem-node:hover {
     padding: 2em;
 }
 
-.projects .row .image {
+.projects .row .image,
+.projects .row .image-game{
     flex: 1 1 45rem;
     transition: filter 0.3s, box-shadow 0.3s;
     filter: grayscale(100%); /* Aplica o efeito de escala de cinza inicialmente */
@@ -458,12 +459,16 @@ img#imagem-node:hover {
     transform: scale(1.1);
 }
 
-.projects .row .image:hover {
+.projects .row .image:hover,
+.projects .row .image-game:hover {
     filter: grayscale(0%); /* Remove o efeito de escala de cinza ao passar o mouse */
 }
 
 .projects .row .image img{
-    width: 80%;
+    width: 100%;
+}
+.projects .row .image-game img{
+    width: 40%;
 }
 
 .projects .row .content {
@@ -622,5 +627,8 @@ img#imagem-node:hover {
     }
     .projects .row .image img {
         max-width: 50%;
+    }
+    .projects .row .image-game img {
+        max-width: 30%;
     }
 }
