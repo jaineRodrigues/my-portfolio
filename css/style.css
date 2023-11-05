@@ -1,0 +1,622 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&family=Poppins&display=swap");
+
+:root {
+    --black: #1c1e21;
+    --hover-dart: #27292c;
+    --buttons: rgb(109, 53, 220);
+    --write: #fff;
+}
+
+* {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: 0.2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+html::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+html::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: #fff;
+    border-radius: 5rem;
+}
+
+body {
+    background-color: var(--black);
+}
+
+section {
+    padding: 2rem 7%;
+}
+
+.header {
+    background: var(--hover-dart);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 3.5rem 7%;
+    border-bottom: var(--border);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.072);
+    z-index: 1000;
+}
+
+.header #title {
+    font-size: 2rem;
+    color: var(--write);
+}
+
+.header .navbar a {
+    margin: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--write);
+    margin: 0.4rem;
+    padding: 2rem;
+}
+
+.header .navbar a:hover {
+    color: var(--buttons);
+    border-bottom: 0.1rem solid var(--buttons);
+    padding-bottom: 0.9rem;
+}
+
+.header .icons div {
+    color: #fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    margin-left: 2rem;
+}
+
+.header .icons div:hover {
+    color: var(--buttons);
+}
+
+#menu-btn {
+    display: none;
+}
+
+.checkbox {
+    opacity: 0%;
+    position: absolute;
+}
+
+.theme {
+    background-color: rgb(0, 0, 0);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 26px;
+    width: 55px;
+    transform: scale(1.2);
+}
+
+.theme .ball {
+    background-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .theme .ball {
+    transform: translateX(28px);
+}
+
+.fa-moon {
+    color: #f1c40f;
+}
+
+.fa-sun {
+    color: #f39c12;
+}
+
+.star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+/* HOME */
+#home {
+    background: linear-gradient(90deg, #2a282d, black);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+}
+
+#home-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    gap: 20px;
+}
+
+#home-content h1 {
+    font-size: 6rem;
+}
+
+#home-content h1 span {
+    color: var(--buttons);
+}
+
+#home-content h2 {
+    font-size: 2rem;
+}
+
+
+.about .row {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about .row .about-image {
+    flex: 1 45rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.about .row .about-image img {
+    width: 40%;
+    border-radius: 100%;
+    transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+    filter: grayscale(70%); /* Aplica o efeito de escala de cinza inicialmente */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Efeito de iluminação inicialmente transparente */
+}
+
+.about .row .about-image img:hover {
+    transform: scale(1.1);
+    filter: grayscale(0%); /* Remove o efeito de escala de cinza ao passar o mouse */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7); /* Adiciona o efeito de iluminação com sombra branca */
+}
+
+.about .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.about .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.about .row .content p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.about .row .content p span {
+    background: linear-gradient(to right, #41069a, transparent);
+    color: var(--write);
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+
+#skills {
+    display: flex;
+    justify-content: space-around;
+    max-width: 100%;
+
+    padding-bottom: 8em;
+    background-color: var(--black);
+    color: var(--write);
+}
+
+#skills-title {
+    font-size: 2.3rem;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    text-align: center;
+    color: var(--write);
+    background-position: 0;
+}
+
+#skills-title:hover {
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0) 50%, rgba(96, 26, 188, 0.5) 50%);
+    background-size: 200% 100%;
+    background-position: 100%;
+    transition: background-position 0.7s ease;
+}
+
+.tecnology {
+    display: flex;
+    justify-content: start;
+    flex-wrap: wrap;
+    overflow-x: hidden;
+    padding: 30px 40px 40px 40px;
+    background-color: var(--black);
+    border-radius: 10px;
+    gap: 20px 30px;
+    position: relative;
+    z-index: 0;
+}
+
+.container-tecnology {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10em;
+}
+
+.title-tecnology {
+    font-size: 2rem;
+    color: var(--write);
+    transition: 0.3s ease-in-out;
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-tecnology {
+    width: 75px;
+    margin: 2em;
+    padding: 1em;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    transition: 0.3s ease-in-out;
+}
+
+.title-tecnology:hover {
+    transition: 0.3s ease-in-out;
+    color: var(--buttons);
+}
+
+.experience-tecnology {
+    font-size: 1.7rem;
+    display: flex;
+    justify-content: center;
+}
+
+img#imagem-js {
+    max-width: 70px;
+}
+
+img#imagem-Figma {
+    min-width: 79px;
+}
+
+img#imagem-css {
+    min-width: 70px;
+}
+
+img#imagem-node {
+    min-width: 100px;
+}
+
+img#imagem-C {
+    max-width: 70px;
+}
+
+img#imagem-html:hover {
+    background-color: rgba(255, 128, 0, 0.302);
+}
+
+img#imagem-css:hover,
+img#imagem-C:hover,
+img#imagem-express:hover {
+    background-color: rgba(102, 240, 255, 0.302);
+}
+
+img#imagem-js:hover {
+    background-color: rgba(217, 255, 0, 0.302);
+}
+
+img#imagem-github:hover {
+    background-color: rgba(255, 255, 255, 0.606);
+}
+
+img#imagem-figma:hover,
+img#imagem-node:hover {
+    background-color: rgba(88, 255, 152, 0.302);
+}
+
+#imagem-git:hover {
+    background-color: rgb(255, 229, 210);
+}
+
+/* Parte da Formação */
+#skills .graduation ul {
+    display: flex;
+    padding-top: 1em;
+    gap: 2em; /* Espaço entre os cards */
+    align-items: center;
+    justify-content: space-between; /* Alinhamento lado a lado */
+    flex-wrap: wrap; /* Quebra de linha automática quando não couberem na largura da tela */
+}
+
+#skills .graduation li {
+    cursor: pointer;
+    border-radius: 6px;
+    position: relative;
+    padding: 1rem;
+    display: grid;
+    gap: 2em;
+    text-align: center;
+    max-width: 220px; /* Reduz a largura */
+    min-width: 160px; /* Reduz a largura mínima */
+    height: 200px; /* Reduz a altura */
+    align-content: center;
+    background-color: var(--hover-dart);
+}
+
+#skills .graduation p {
+    font-size: 1.2em;
+}
+
+#skills .graduation li::before,
+#skills .graduation li::after {
+    content: "";
+    transition: 0.5s ease-in-out;
+    border-radius: 6px;
+    width: 0px;
+    height: 0px;
+    position: absolute;
+}
+
+#skills .graduation li::before {
+    top: -2px;
+    right: -2px;
+    border-top: 2px solid var(--hover-dart);
+    border-right: 2px solid transparent;
+}
+
+#skills .graduation li::after {
+    bottom: -2px;
+    left: -2px;
+    border-bottom: 2px solid var(--buttons);
+    border-left: 2px solid transparent;
+}
+
+#skills .graduation li:hover::before,
+#skills .graduation li:hover::after {
+    width: 100%;
+    height: 100%;
+}
+
+#skills .graduation li:hover::before {
+    border-top: 2px solid var(--buttons);
+    border-right: 2px solid var(--buttons);
+}
+
+#skills .graduation li:hover::after {
+    border-bottom: 2px solid var(--buttons);
+    border-left: 2px solid var(--buttons);
+}
+
+#projects-title {
+    font-size: 2.3rem;
+    padding-top: 5em;
+    padding-bottom: 4em;
+    text-align: center;
+    color: var(--write);
+    background-position: 0;
+}
+
+.projects .row {
+    display: flex;
+    align-items: center;
+    background: var(--hover-dart);
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.projects .row .image {
+    flex: 1 1 45rem;
+    transition: filter 0.3s, box-shadow 0.3s;
+    filter: grayscale(100%); /* Aplica o efeito de escala de cinza inicialmente */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0);
+}
+
+.projects .row a {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.9rem 3rem;
+    font-size: 1.7rem;
+    color: #fff;
+    background: var(--buttons);
+    cursor: pointer;
+}
+
+.projects .row a:hover {
+    transform: scale(1.1);
+}
+
+.projects .row .image:hover {
+    filter: grayscale(0%); /* Remove o efeito de escala de cinza ao passar o mouse */
+}
+
+.projects .row .image {
+    width: 100%;
+}
+.projects .row .content {
+    flex: 1 1 45rem;
+    padding: 2rem;
+}
+
+.projects .row .content h3 {
+    font-size: 3rem;
+    color: #fff;
+}
+
+.projects .row .content p {
+    font-size: 1.6rem;
+    color: #ccc;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+/* FOOTER */
+
+.footer {
+    background: var(--black);
+    text-align: center;
+}
+
+.footer .share {
+    padding: 1rem 0;
+}
+
+.footer .share a {
+    height: 5rem;
+    width: 5rem;
+    line-height: 5rem;
+    font-size: 2rem;
+    color: var(--write);
+    border: 1px solid var(--write);
+    margin: 0.3rem;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none; /* Remove o sublinhado padrão dos links */
+}
+
+.footer .share a:hover {
+    background-color: var(--buttons);
+}
+
+@keyframes animate {
+    from {
+        transform: translateY(0);
+    }
+    to {
+        transform: translateY(-200px);
+    }
+}
+
+@keyframes pisca {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+@keyframes inicializar {
+    from {
+        opacity: 0;
+        transform: translate3d(0, -60px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+/* Media queries */
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+
+    .header {
+        padding: 1.5rem 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+}
+@media (max-width: 768px) {
+    #menu-btn {
+        display: inline-block;
+    }
+
+    .header .navbar {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background: #fff;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+
+    .header .navbar.active {
+        right: 0;
+    }
+
+    .header .navbar a {
+        color: var(--black);
+        display: block;
+        margin: 1.5rem;
+        padding: 0.5rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form {
+        width: 90%;
+        right: 2rem;
+    }
+
+    .home {
+        background-position: left;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .home .content h3 {
+        font-size: 4.5rem;
+    }
+
+    .home .content p {
+        font-size: 1.5rem;
+    }
+
+    #skills {
+        flex-direction: column; 
+    }
+
+    #skills .graduation {
+        order: 1; 
+    }
+
+    .title-tecnology {
+        font-size: 1.5rem;
+    }
+
+    .imagem-tecnology {
+        width: 50px; 
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+}

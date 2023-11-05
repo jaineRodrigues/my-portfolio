@@ -1,0 +1,153 @@
+:root {
+    --black: #1c1e21;
+    --hover-dart: #27292c;
+    --buttons: rgb(109, 53, 220);
+    --write: #fff;
+    --light: rgb(248, 248, 248);
+}
+
+
+.light {
+    transition: all 0.2s;
+}
+
+.light body {
+    background-color: var(--write);
+}
+
+.light .header {
+    background: var(--write);
+}
+
+.light .header #title {
+    color: var(--black);
+}
+
+.light .header .navbar a {
+    color: var(--black);
+}
+
+.light #home {
+    color: var(--light);
+    background: linear-gradient(90deg, rgb(216, 216, 216), white);
+}
+
+.light #home h1 span {
+    color: var(--buttons);
+}
+
+.light #home-content {
+    color: var(--buttons);
+    font-weight: 600;
+}
+
+.light #about {
+    background-color: var(--light);
+}
+
+.light #about .row {
+    background-color: var(--light);
+}
+
+.light .about .row .content h3 {
+    color: var(--black);
+}
+
+.light .about .row .content p {
+    color: var(--hover-dart);
+    font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.light .about .row .content p span{
+    color: var(--black);
+    background: linear-gradient(to right, rgba(144, 92, 223, 0.772)20, 176, 0.42, transparent);
+}
+
+.light .about-text {
+    color: black;
+    font-weight: 600;
+}
+
+.light .skills-titulo {
+    background-color: rgb(248, 248, 248);
+    color: var(--light);
+}
+
+.light .skills {
+    background-color: rgb(248, 248, 248);
+    color: var(--light);
+}
+
+.light .star {
+    display: none;
+}
+
+.light .footer {
+    background-color: rgb(219, 219, 219);
+    color: black;
+    font-weight: 600;
+}
+
+.light .footer .share a {
+    color: var(--black);
+    border: 1px solid var(--buttons);
+}
+
+.light.footer .share a:hover {
+    background-color: var(--buttons);
+}
+
+.light #skills {
+    background-color: var(--light);
+}
+
+.light #skills .tecnology {
+    background-color: var(--light);
+    color: var(--black);
+}
+
+.light #skills .graduation li{
+    background-color: var(--write);
+    border: 1px solid #7b828c;
+    color: var(--hover-dart);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.light #skills-title{
+    background-color: var(--light);
+    color: var(--black);
+}
+
+.light #skills .graduation li:hover{
+    background-color: var(--buttons);
+    color: var(--hover-dart);
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.light #skills .graduation p{
+    color: var(--hover-dart);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.4em;
+}
+
+.light .projects{
+    background-color: var(--write);
+}
+
+.light #projects-title{
+    background-color: var(--light);
+    color: var(--black);
+}
+
+.light .projects .row{
+    background-color: var(--light);
+    color: var(--black)
+}
+
+.light .projects .row h3{ 
+    color: var(--black)
+}
+
+.light .projects .row p{
+    color: var(--black)
+}
