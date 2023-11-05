@@ -462,9 +462,10 @@ img#imagem-node:hover {
     filter: grayscale(0%); /* Remove o efeito de escala de cinza ao passar o mouse */
 }
 
-.projects .row .image {
-    width: 100%;
+.projects .row .image img{
+    width: 80%;
 }
+
 .projects .row .content {
     flex: 1 1 45rem;
     padding: 2rem;
@@ -618,5 +619,8 @@ img#imagem-node:hover {
 @media (max-width: 450px) {
     html {
         font-size: 50%;
+    }
+    .projects .row .image img {
+        max-width: 50%;
     }
 }
