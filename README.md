@@ -12,7 +12,4 @@ Neste portfólio, você encontrará informações sobre mim, minhas habilidades,
 - CSS
 - JavaScript
 
-## Demonstração
-
-Você pode ver uma demonstração ao vivo do meu portfólio [aqui](#) (https://jainerodrigues.github.io/my-portfolio/ ).
 
